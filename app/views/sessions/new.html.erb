@@ -1,0 +1,24 @@
+<div class="depot_form">
+<% if flash[:alert] %>
+<p id="notice"><%= flash[:alert] %></p>
+<% end %>
+<%= form_tag do %>
+<fieldset>
+<legend>Please Log In</legend>
+<div>
+<%= label_tag :name, 'Name:' %>
+<%= text_field_tag :name, params[:name] %>
+</div>
+report erratum • discuss
+Iteration I2: Authenticating Users • 197
+Download from Wow! eBook <www.wowebook.com>
+<div>
+<%= label_tag :password, 'Password:' %>
+<%= password_field_tag :password, params[:password] %>
+</div>
+<div>
+<%= submit_tag "Login" %>
+</div>
+</fieldset>
+<% end %>
+</div>
